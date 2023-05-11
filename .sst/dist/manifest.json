@@ -1,0 +1,385 @@
+{
+  "version": "31.0.0",
+  "artifacts": {
+    "dev-nextinside-Site.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "dev-nextinside-Site.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "dev-nextinside-Site": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://286831121265/us-east-1",
+      "properties": {
+        "templateFile": "dev-nextinside-Site.template.json",
+        "tags": {
+          "sst:app": "nextinside",
+          "sst:stage": "dev"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::286831121265:role/cdk-hnb659fds-deploy-role-286831121265-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::286831121265:role/cdk-hnb659fds-cfn-exec-role-286831121265-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-286831121265-us-east-1/ac66d10e5ac4527f86200d8dca7fa20540def94abfd28833da4ea3aa6a8d09a6.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "dev-nextinside-Site.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::286831121265:role/cdk-hnb659fds-lookup-role-286831121265-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "dev-nextinside-Site.assets"
+      ],
+      "metadata": {
+        "/dev-nextinside-Site": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "sst:app",
+                "Value": "nextinside"
+              },
+              {
+                "Key": "sst:stage",
+                "Value": "dev"
+              }
+            ]
+          }
+        ],
+        "/dev-nextinside-Site/CustomResourceHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerServiceRole41AEC181"
+          }
+        ],
+        "/dev-nextinside-Site/CustomResourceHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomResourceHandlerE8FB56BA"
+          }
+        ],
+        "/dev-nextinside-Site/users/Table": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "usersTableA9DCAD73"
+            }
+          }
+        ],
+        "/dev-nextinside-Site/users/Table/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usersTableA9DCAD73"
+          }
+        ],
+        "/dev-nextinside-Site/users/Parameter_tableName/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "usersParametertableName340CFBF1"
+          }
+        ],
+        "/dev-nextinside-Site/api/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiApiC3C473D0"
+          }
+        ],
+        "/dev-nextinside-Site/api/Api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiApiDefaultStageA626ED4D"
+          }
+        ],
+        "/dev-nextinside-Site/api/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLogGroup924E5B7A"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETServiceRole57A117D1"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETServiceRoleDefaultPolicyE9384899"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGET2D5CB7A7"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETEventInvokeConfig794FB4BC"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--/Integration_GET_--/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGETIntegrationGET451F73F0"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--/Integration_GET_---Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGETIntegrationGETPermission02100559"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGET1A9E87AB"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--session/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETsessionServiceRoleDBF0F3AC"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--session/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETsessionServiceRoleDefaultPolicy9B1D7832"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--session/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETsessionB4C9BFAB"
+          }
+        ],
+        "/dev-nextinside-Site/api/Lambda_GET_--session/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiLambdaGETsessionEventInvokeConfigA1D84E37"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--session/Integration_GET_--session/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGETsessionIntegrationGETsessionE05BB6EC"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--session/Integration_GET_--session-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGETsessionIntegrationGETsessionPermission9BD18BB8"
+          }
+        ],
+        "/dev-nextinside-Site/api/Route_GET_--session/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiRouteGETsessionAC0EB260"
+          }
+        ],
+        "/dev-nextinside-Site/api/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apiParameterurl1D4D90E2"
+          }
+        ],
+        "/dev-nextinside-Site/site/ServerFunctionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionRole1F8F4FAC"
+          }
+        ],
+        "/dev-nextinside-Site/site/ServerFunction/AssetReplacerPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacerPolicy304BF125"
+          }
+        ],
+        "/dev-nextinside-Site/site/ServerFunction/AssetReplacer/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionAssetReplacer9A11D516"
+          }
+        ],
+        "/dev-nextinside-Site/site/ServerFunction/ServerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunction6DFA6F1B"
+          }
+        ],
+        "/dev-nextinside-Site/site/ServerFunction/ServerFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteServerFunctionLogRetention7123678D"
+          }
+        ],
+        "/dev-nextinside-Site/site/Parameter_url/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "siteParameterurl3D1716BC"
+          }
+        ],
+        "/dev-nextinside-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/dev-nextinside-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/dev-nextinside-Site/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/dev-nextinside-Site/auth/CloudFrontInvalidatorPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authCloudFrontInvalidatorPolicyE1B28EEC"
+          }
+        ],
+        "/dev-nextinside-Site/auth/StackMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authStackMetadataE2173050"
+          }
+        ],
+        "/dev-nextinside-Site/auth/prefix/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authprefix52325D5C"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_ANY_--auth--{proxy+}/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaANYauthproxyServiceRoleB521D3D5"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_ANY_--auth--{proxy+}/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaANYauthproxyServiceRoleDefaultPolicyC59B6FCC"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_ANY_--auth--{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaANYauthproxy8E797D91"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_ANY_--auth--{proxy+}/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaANYauthproxyEventInvokeConfig20D3D835"
+          }
+        ],
+        "/dev-nextinside-Site/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteANYauthproxyIntegrationANYauthproxy7D58D719"
+          }
+        ],
+        "/dev-nextinside-Site/Route_ANY_--auth--{proxy+}/Integration_ANY_--auth--{proxy+}-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteANYauthproxyIntegrationANYauthproxyPermissionD85159CF"
+          }
+        ],
+        "/dev-nextinside-Site/Route_ANY_--auth--{proxy+}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteANYauthproxy7651BEA4"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_GET_--auth/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaGETauthServiceRoleFD1BFD8F"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_GET_--auth/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaGETauthServiceRoleDefaultPolicyCE020F66"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_GET_--auth/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaGETauthEE6E69A6"
+          }
+        ],
+        "/dev-nextinside-Site/Lambda_GET_--auth/EventInvokeConfig/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LambdaGETauthEventInvokeConfigF5AB3F80"
+          }
+        ],
+        "/dev-nextinside-Site/Route_GET_--auth/Integration_GET_--auth/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteGETauthIntegrationGETauth3FF21877"
+          }
+        ],
+        "/dev-nextinside-Site/Route_GET_--auth/Integration_GET_--auth-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteGETauthIntegrationGETauthPermission46CAC93C"
+          }
+        ],
+        "/dev-nextinside-Site/Route_GET_--auth/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RouteGETauth879E8211"
+          }
+        ],
+        "/dev-nextinside-Site/SSTStackOutputApiUrl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiUrl"
+          }
+        ],
+        "/dev-nextinside-Site/SSTStackOutputSSTMetadata": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SSTMetadata"
+          }
+        ],
+        "/dev-nextinside-Site/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev-nextinside-Site/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev-nextinside-Site"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
